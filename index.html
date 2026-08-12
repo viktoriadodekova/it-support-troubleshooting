@@ -11,45 +11,137 @@
 
 <body>
 
-    <header>
-        <h1>IT Support Troubleshooting Center</h1>
-        <p>Interactive incident management and troubleshooting portfolio</p>
+    <header class="site-header">
+        <div class="header-content">
+            <div>
+                <p class="eyebrow">IT SUPPORT PORTFOLIO</p>
+                <h1>Incident Troubleshooting Center</h1>
+                <p class="header-description">
+                    Interactive incident management, root-cause analysis
+                    and troubleshooting documentation.
+                </p>
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                Lab Environment Online
+            </div>
+        </div>
     </header>
 
     <main>
 
         <section class="intro">
+            <p class="section-label">INCIDENT MANAGEMENT</p>
             <h2>Incident Overview</h2>
             <p>
-                Explore simulated IT support incidents, troubleshooting steps,
-                root causes and resolutions.
+                Select an incident to review its root cause,
+                resolution and verification steps.
             </p>
         </section>
 
         <section class="incident-grid">
 
-            <article class="incident-card">
+            <article class="incident-card" data-incident="INC-001">
 
-                <div class="card-front">
+                <div class="card-inner">
 
-                    <span class="incident-id">INC-001</span>
+                    <!-- FRONT OF CARD -->
+                    <div class="card-face card-front">
 
-                    <h3>User cannot access ERP application</h3>
+                        <div class="card-top">
+                            <span class="incident-id">INC-001</span>
+                            <span class="priority-badge priority-high">
+                                High Priority
+                            </span>
+                        </div>
 
-                    <p>
-                        User receives an authentication error when attempting
-                        to log in to the ERP system.
-                    </p>
+                        <div>
+                            <p class="category">AUTHENTICATION</p>
 
-                    <div class="incident-info">
-                        <p><strong>Priority:</strong> High</p>
-                        <p><strong>Status:</strong> Resolved</p>
-                        <p><strong>Category:</strong> Authentication</p>
+                            <h3>User cannot access ERP application</h3>
+
+                            <p class="incident-description">
+                                User receives an authentication error when
+                                attempting to log in to the ERP system.
+                            </p>
+                        </div>
+
+                        <div class="incident-info">
+                            <div>
+                                <span>Environment</span>
+                                <strong>Windows 11 / ERP</strong>
+                            </div>
+
+                            <div>
+                                <span>Impact</span>
+                                <strong>Single user</strong>
+                            </div>
+
+                            <div>
+                                <span>Status</span>
+                                <strong class="resolved">Resolved</strong>
+                            </div>
+                        </div>
+
+                        <button
+                            class="flip-button"
+                            data-action="flip"
+                            type="button"
+                            aria-pressed="false"
+                        >
+                            View resolution →
+                        </button>
+
                     </div>
 
-                    <button class="flip-button">
-                        View resolution
-                    </button>
+                    <!-- BACK OF CARD -->
+                    <div class="card-face card-back">
+
+                        <div class="card-top">
+                            <span class="incident-id">INC-001</span>
+                            <span class="resolved-badge">
+                                Resolved
+                            </span>
+                        </div>
+
+                        <div class="resolution-section">
+                            <p class="detail-label">ROOT CAUSE</p>
+                            <h3>Account lockout</h3>
+                            <p>
+                                Multiple unsuccessful authentication attempts
+                                caused the user's account to become locked.
+                            </p>
+                        </div>
+
+                        <div class="resolution-section">
+                            <p class="detail-label">RESOLUTION</p>
+                            <ul>
+                                <li>User identity verified</li>
+                                <li>Account status checked</li>
+                                <li>Locked account identified</li>
+                                <li>Account access restored</li>
+                            </ul>
+                        </div>
+
+                        <div class="resolution-section verification">
+                            <p class="detail-label">VERIFICATION</p>
+                            <p>
+                                User successfully authenticated and confirmed
+                                access to the required ERP functionality.
+                            </p>
+                        </div>
+
+                        <button
+                            class="flip-button secondary-button"
+                            data-action="flip"
+                            type="button"
+                            aria-pressed="true"
+                        >
+                            ← Back to incident
+                        </button>
+
+                    </div>
 
                 </div>
 
@@ -57,12 +149,20 @@
 
         </section>
 
+        <section class="coming-next">
+            <p class="section-label">NEXT MODULE</p>
+            <h2>Troubleshooting & Error Log</h2>
+            <p>
+                Diagnostic steps, failed hypotheses, commands and root-cause
+                investigation will be documented here.
+            </p>
+        </section>
+
     </main>
 
     <footer>
         <p>
-            Portfolio project demonstrating IT support,
-            troubleshooting and problem-solving skills.
+            Practical IT Support Portfolio · HTML · CSS · JavaScript · Git
         </p>
     </footer>
 
