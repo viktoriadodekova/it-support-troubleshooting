@@ -379,6 +379,121 @@
 
         </section>
 
+
+<section class="console-section">
+
+    <div class="console-heading">
+        <div>
+            <p class="section-label">DIAGNOSTIC TOOLS</p>
+            <h2>Simulated Troubleshooting Console</h2>
+            <p>
+                Review diagnostic checks used during the investigation
+                of incident INC-001.
+            </p>
+        </div>
+
+        <span class="simulation-badge">
+            SIMULATED LAB
+        </span>
+    </div>
+
+    <div class="console-layout">
+
+        <div class="console-controls">
+
+            <button class="console-button active"
+                    data-command="ping"
+                    type="button">
+                PING
+            </button>
+
+            <button class="console-button"
+                    data-command="dns"
+                    type="button">
+                DNS
+            </button>
+
+            <button class="console-button"
+                    data-command="account"
+                    type="button">
+                ACCOUNT
+            </button>
+
+            <button class="console-button"
+                    data-command="auth"
+                    type="button">
+                AUTH LOG
+            </button>
+
+        </div>
+
+        <div class="terminal-window">
+
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span>support-diagnostics</span>
+
+                <span class="terminal-environment">
+                    LAB
+                </span>
+            </div>
+
+            <div class="terminal-body">
+
+                <div class="terminal-command">
+                    <span class="terminal-prompt">$</span>
+                    <span id="console-command">
+                        ping erp.lab.local
+                    </span>
+                </div>
+
+                <pre id="console-output">PING erp.lab.local (10.10.10.25)
+
+64 bytes from 10.10.10.25: icmp_seq=1
+64 bytes from 10.10.10.25: icmp_seq=2
+64 bytes from 10.10.10.25: icmp_seq=3
+
+--- ping statistics ---
+3 packets transmitted, 3 received
+
+RESULT: Network connectivity successful.</pre>
+
+            </div>
+
+        </div>
+
+        <aside class="console-analysis">
+
+            <p class="detail-label">
+                DIAGNOSTIC CONCLUSION
+            </p>
+
+            <h3 id="console-title">
+                Network reachable
+            </h3>
+
+            <p id="console-analysis">
+                The simulated ERP endpoint responds successfully.
+                Basic network connectivity is therefore unlikely
+                to be the cause of the authentication incident.
+            </p>
+
+            <div class="analysis-status success-status"
+                 id="analysis-status">
+                TEST PASSED
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
     </main>
 
     <footer>
