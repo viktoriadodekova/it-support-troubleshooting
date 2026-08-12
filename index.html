@@ -46,11 +46,12 @@
 
                 <div class="card-inner">
 
-                    <!-- FRONT OF CARD -->
+                    <!-- FRONT -->
                     <div class="card-face card-front">
 
                         <div class="card-top">
                             <span class="incident-id">INC-001</span>
+
                             <span class="priority-badge priority-high">
                                 High Priority
                             </span>
@@ -68,6 +69,7 @@
                         </div>
 
                         <div class="incident-info">
+
                             <div>
                                 <span>Environment</span>
                                 <strong>Windows 11 / ERP</strong>
@@ -82,6 +84,7 @@
                                 <span>Status</span>
                                 <strong class="resolved">Resolved</strong>
                             </div>
+
                         </div>
 
                         <button
@@ -95,41 +98,58 @@
 
                     </div>
 
-                    <!-- BACK OF CARD -->
+                    <!-- BACK -->
                     <div class="card-face card-back">
 
                         <div class="card-top">
                             <span class="incident-id">INC-001</span>
+
                             <span class="resolved-badge">
                                 Resolved
                             </span>
                         </div>
 
                         <div class="resolution-section">
-                            <p class="detail-label">ROOT CAUSE</p>
+
+                            <p class="detail-label">
+                                ROOT CAUSE
+                            </p>
+
                             <h3>Account lockout</h3>
+
                             <p>
                                 Multiple unsuccessful authentication attempts
                                 caused the user's account to become locked.
                             </p>
+
                         </div>
 
                         <div class="resolution-section">
-                            <p class="detail-label">RESOLUTION</p>
+
+                            <p class="detail-label">
+                                RESOLUTION
+                            </p>
+
                             <ul>
                                 <li>User identity verified</li>
                                 <li>Account status checked</li>
                                 <li>Locked account identified</li>
                                 <li>Account access restored</li>
                             </ul>
+
                         </div>
 
                         <div class="resolution-section verification">
-                            <p class="detail-label">VERIFICATION</p>
+
+                            <p class="detail-label">
+                                VERIFICATION
+                            </p>
+
                             <p>
                                 User successfully authenticated and confirmed
                                 access to the required ERP functionality.
                             </p>
+
                         </div>
 
                         <button
@@ -149,13 +169,214 @@
 
         </section>
 
-        <section class="coming-next">
-            <p class="section-label">NEXT MODULE</p>
-            <h2>Troubleshooting & Error Log</h2>
-            <p>
-                Diagnostic steps, failed hypotheses, commands and root-cause
-                investigation will be documented here.
-            </p>
+
+        <!-- TROUBLESHOOTING -->
+
+        <section class="troubleshooting-section">
+
+            <div class="troubleshooting-header">
+
+                <div>
+                    <p class="section-label">
+                        INC-001 · DIAGNOSTIC RECORD
+                    </p>
+
+                    <h2>Troubleshooting & Error Log</h2>
+
+                    <p>
+                        Structured investigation from initial symptom
+                        through root-cause identification and verification.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="troubleshooting-grid">
+
+                <article class="troubleshooting-panel">
+
+                    <span class="step-number">01</span>
+
+                    <div>
+                        <p class="detail-label">SYMPTOM</p>
+
+                        <h3>Authentication failure</h3>
+
+                        <p>
+                            The user reports being unable to sign in to
+                            the ERP application despite using their usual
+                            credentials.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="troubleshooting-panel">
+
+                    <span class="step-number">02</span>
+
+                    <div>
+                        <p class="detail-label">
+                            INITIAL HYPOTHESES
+                        </p>
+
+                        <h3>Potential causes</h3>
+
+                        <ul>
+                            <li>Incorrect username or password</li>
+                            <li>Expired password</li>
+                            <li>Locked user account</li>
+                            <li>Network connectivity problem</li>
+                            <li>ERP authentication service unavailable</li>
+                        </ul>
+                    </div>
+
+                </article>
+
+
+                <article class="troubleshooting-panel">
+
+                    <span class="step-number">03</span>
+
+                    <div>
+                        <p class="detail-label">
+                            SCOPE CHECK
+                        </p>
+
+                        <h3>Determine affected users</h3>
+
+                        <p>
+                            Confirmed that other users were able to access
+                            the ERP application normally.
+                        </p>
+
+                        <div class="diagnostic-result success-result">
+                            Result: Issue isolated to one user
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="troubleshooting-panel">
+
+                    <span class="step-number">04</span>
+
+                    <div>
+                        <p class="detail-label">
+                            NETWORK TEST
+                        </p>
+
+                        <h3>Verify connectivity</h3>
+
+                        <p>
+                            Network connectivity to the simulated ERP
+                            environment was checked successfully.
+                        </p>
+
+                        <div class="diagnostic-result success-result">
+                            Result: Network reachable
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="troubleshooting-panel error-panel">
+
+                    <span class="step-number">05</span>
+
+                    <div>
+                        <p class="detail-label">
+                            ERROR IDENTIFIED
+                        </p>
+
+                        <h3>Account locked</h3>
+
+                        <p>
+                            Account status review identified a lockout
+                            following multiple unsuccessful authentication
+                            attempts.
+                        </p>
+
+                        <div class="diagnostic-result error-result">
+                            AUTH_ERROR: Account temporarily locked
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="troubleshooting-panel">
+
+                    <span class="step-number">06</span>
+
+                    <div>
+                        <p class="detail-label">
+                            ROOT CAUSE
+                        </p>
+
+                        <h3>Repeated failed authentication</h3>
+
+                        <p>
+                            Stored or incorrectly entered credentials caused
+                            repeated authentication failures and triggered
+                            the account lockout policy.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="troubleshooting-panel">
+
+                    <span class="step-number">07</span>
+
+                    <div>
+                        <p class="detail-label">
+                            RESOLUTION
+                        </p>
+
+                        <h3>Restore user access</h3>
+
+                        <ul>
+                            <li>Verified the user's identity</li>
+                            <li>Confirmed account lockout status</li>
+                            <li>Restored account access</li>
+                            <li>Asked user to retry authentication</li>
+                        </ul>
+                    </div>
+
+                </article>
+
+
+                <article class="troubleshooting-panel verification-panel">
+
+                    <span class="step-number">08</span>
+
+                    <div>
+                        <p class="detail-label">
+                            VERIFICATION
+                        </p>
+
+                        <h3>Incident resolved</h3>
+
+                        <p>
+                            User successfully logged in and confirmed access
+                            to the required ERP functionality.
+                        </p>
+
+                        <div class="diagnostic-result success-result">
+                            Status: Resolved
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+
         </section>
 
     </main>

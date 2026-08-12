@@ -388,3 +388,140 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ================================
+   TROUBLESHOOTING
+================================ */
+
+.troubleshooting-section {
+    margin-top: 70px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+}
+
+.troubleshooting-header {
+    margin-bottom: 28px;
+}
+
+.troubleshooting-header h2 {
+    margin: 4px 0 5px;
+    font-size: 1.5rem;
+}
+
+.troubleshooting-header > div > p:last-child {
+    color: var(--text-secondary);
+}
+
+.troubleshooting-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.troubleshooting-panel {
+    position: relative;
+
+    display: flex;
+    gap: 18px;
+
+    padding: 22px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.troubleshooting-panel:hover {
+    transform: translateY(-2px);
+    border-color: #41516e;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 38px;
+
+    background: var(--surface-light);
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    color: var(--accent);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.troubleshooting-panel h3 {
+    margin: 4px 0 8px;
+    font-size: 1rem;
+}
+
+.troubleshooting-panel p:not(.detail-label),
+.troubleshooting-panel li {
+    color: var(--text-secondary);
+    font-size: 0.86rem;
+}
+
+.troubleshooting-panel ul {
+    padding-left: 18px;
+}
+
+.diagnostic-result {
+    margin-top: 14px;
+    padding: 10px 12px;
+
+    border-radius: 7px;
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.76rem;
+}
+
+.success-result {
+    color: #bbf7d0;
+
+    background: rgba(34, 197, 94, 0.07);
+
+    border: 1px solid rgba(34, 197, 94, 0.18);
+}
+
+.error-result {
+    color: #fecaca;
+
+    background: rgba(239, 68, 68, 0.07);
+
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.error-panel {
+    border-color: rgba(239, 68, 68, 0.25);
+}
+
+.verification-panel {
+    border-color: rgba(34, 197, 94, 0.2);
+}
+
+
+@media (max-width: 850px) {
+
+    .troubleshooting-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
