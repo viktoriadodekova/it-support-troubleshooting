@@ -40,9 +40,81 @@
             </p>
         </section>
 
+
+<section class="incident-controls">
+
+    <div class="search-wrapper">
+        <label for="incident-search">Search incidents</label>
+
+        <input
+            type="search"
+            id="incident-search"
+            placeholder="Search by ID, title or category..."
+            autocomplete="off"
+        >
+    </div>
+
+    <div class="filter-wrapper">
+
+        <span class="filter-label">Filter</span>
+
+        <div class="filter-buttons">
+
+            <button
+                class="filter-button active"
+                data-filter="all"
+                type="button"
+            >
+                All
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="high"
+                type="button"
+            >
+                High Priority
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="resolved"
+                type="button"
+            >
+                Resolved
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="authentication"
+                type="button"
+            >
+                Authentication
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="data"
+                type="button"
+            >
+                Data
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
         <section class="incident-grid">
 
-            <article class="incident-card" data-incident="INC-001">
+            <article
+                class="incident-card"
+                data-incident="INC-001"
+                data-priority="high"
+                data-status="resolved"
+                data-category="authentication"
+            >
 
                 <div class="card-inner">
 

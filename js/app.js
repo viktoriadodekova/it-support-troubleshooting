@@ -256,3 +256,104 @@ consoleButtons.forEach((button) => {
 
 });
 
+
+
+// =================================
+// INCIDENT SEARCH & FILTERING
+// =================================
+
+const incidentSearch =
+    document.getElementById("incident-search");
+
+const filterButtons =
+    document.querySelectorAll(".filter-button");
+
+let activeFilter = "all";
+
+
+function filterIncidents() {
+
+    const searchTerm =
+        incidentSearch.value
+            .toLowerCase()
+            .trim();
+
+    const incidentCards =
+        document.querySelectorAll(".incident-card");
+
+    incidentCards.forEach((card) => {
+
+        const searchableText =
+            card.textContent.toLowerCase();
+
+        const matchesSearch =
+            searchableText.includes(searchTerm);
+
+
+        let matchesFilter = false;
+
+        if (activeFilter === "all") {
+
+            matchesFilter = true;
+
+        } else if (activeFilter === "high") {
+
+            matchesFilter =
+                card.dataset.priority === "high";
+
+        } else if (activeFilter === "resolved") {
+
+            matchesFilter =
+                card.dataset.status === "resolved";
+
+        } else {
+
+            matchesFilter =
+                card.dataset.category === activeFilter;
+
+        }
+
+
+        if (matchesSearch && matchesFilter) {
+
+            card.style.display = "";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+incidentSearch.addEventListener(
+    "input",
+    filterIncidents
+);
+
+
+filterButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        activeFilter =
+            button.dataset.filter;
+
+
+        filterButtons.forEach(
+            (currentButton) => {
+                currentButton.classList.remove("active");
+            }
+        );
+
+
+        button.classList.add("active");
+
+        filterIncidents();
+
+    });
+
+});
