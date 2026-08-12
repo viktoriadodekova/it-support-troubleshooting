@@ -525,3 +525,69 @@ footer {
     }
 
 }
+
+
+/* ================================
+   INTERACTIVE TROUBLESHOOTING
+================================ */
+
+.troubleshooting-panel {
+    cursor: pointer;
+}
+
+.troubleshooting-panel:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.troubleshooting-panel p:not(.detail-label),
+.troubleshooting-panel ul,
+.troubleshooting-panel .diagnostic-result {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0;
+
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease,
+        margin-top 0.25s ease;
+}
+
+.troubleshooting-panel.is-expanded p:not(.detail-label),
+.troubleshooting-panel.is-expanded ul,
+.troubleshooting-panel.is-expanded .diagnostic-result {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.troubleshooting-panel.is-expanded p:not(.detail-label) {
+    margin-top: 8px;
+}
+
+.troubleshooting-panel.is-expanded ul {
+    margin-top: 8px;
+}
+
+.troubleshooting-panel.is-expanded .diagnostic-result {
+    margin-top: 14px;
+}
+
+.troubleshooting-panel::after {
+    content: "+";
+
+    position: absolute;
+    top: 21px;
+    right: 20px;
+
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    transition: transform 0.25s ease;
+}
+
+.troubleshooting-panel.is-expanded::after {
+    content: "−";
+}
+
