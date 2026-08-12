@@ -357,3 +357,55 @@ filterButtons.forEach((button) => {
     });
 
 });
+
+
+// =================================
+// DASHBOARD STATISTICS
+// =================================
+
+function updateDashboardStats() {
+
+    const cards =
+        document.querySelectorAll(".incident-card");
+
+    const highPriority =
+        document.querySelectorAll(
+            '.incident-card[data-priority="high"]'
+        );
+
+    const resolved =
+        document.querySelectorAll(
+            '.incident-card[data-status="resolved"]'
+        );
+
+    const categories =
+        new Set(
+            Array.from(cards).map(
+                (card) => card.dataset.category
+            )
+        );
+
+
+    document.getElementById(
+        "total-incidents"
+    ).textContent = cards.length;
+
+
+    document.getElementById(
+        "high-incidents"
+    ).textContent = highPriority.length;
+
+
+    document.getElementById(
+        "resolved-incidents"
+    ).textContent = resolved.length;
+
+
+    document.getElementById(
+        "incident-categories"
+    ).textContent = categories.size;
+
+}
+
+
+updateDashboardStats();
