@@ -985,3 +985,15 @@ footer {
     }
 
 }
+
+
+/* MEDIUM PRIORITY */
+
+.priority-medium {
+    color: #fde68a;
+
+    background: rgba(245, 158, 11, 0.1);
+
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+

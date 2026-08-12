@@ -100,6 +100,14 @@
                 Data
             </button>
 
+            <button
+                class="filter-button"
+                data-filter="network"
+                type="button"
+            >
+                Network
+            </button>
+
         </div>
 
     </div>
@@ -239,6 +247,282 @@
 
             </article>
 
+
+
+            <!-- INC-002 -->
+            <article
+                class="incident-card"
+                data-incident="INC-002"
+                data-priority="medium"
+                data-status="resolved"
+                data-category="data"
+            >
+
+                <div class="card-inner">
+
+                    <!-- FRONT -->
+                    <div class="card-face card-front">
+
+                        <div class="card-top">
+                            <span class="incident-id">INC-002</span>
+
+                            <span class="priority-badge priority-medium">
+                                Medium Priority
+                            </span>
+                        </div>
+
+                        <div>
+                            <p class="category">DATA</p>
+
+                            <h3>Product data import rejected</h3>
+
+                            <p class="incident-description">
+                                A user attempts to import product data into
+                                the ERP application, but the file fails
+                                validation and is rejected.
+                            </p>
+                        </div>
+
+                        <div class="incident-info">
+
+                            <div>
+                                <span>Environment</span>
+                                <strong>ERP / CSV Import</strong>
+                            </div>
+
+                            <div>
+                                <span>Impact</span>
+                                <strong>Product update delayed</strong>
+                            </div>
+
+                            <div>
+                                <span>Status</span>
+                                <strong class="resolved">Resolved</strong>
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="flip-button"
+                            data-action="flip"
+                            type="button"
+                            aria-pressed="false"
+                        >
+                            View resolution →
+                        </button>
+
+                    </div>
+
+
+                    <!-- BACK -->
+                    <div class="card-face card-back">
+
+                        <div class="card-top">
+                            <span class="incident-id">INC-002</span>
+
+                            <span class="resolved-badge">
+                                Resolved
+                            </span>
+                        </div>
+
+                        <div class="resolution-section">
+
+                            <p class="detail-label">
+                                ROOT CAUSE
+                            </p>
+
+                            <h3>Missing mandatory product code</h3>
+
+                            <p>
+                                One record in the import file contained an
+                                empty mandatory ProductCode field, causing
+                                the ERP validation process to reject the file.
+                            </p>
+
+                        </div>
+
+                        <div class="resolution-section">
+
+                            <p class="detail-label">
+                                RESOLUTION
+                            </p>
+
+                            <ul>
+                                <li>Reviewed the import validation error</li>
+                                <li>Checked required CSV fields</li>
+                                <li>Identified the incomplete record</li>
+                                <li>Corrected the product data</li>
+                                <li>Repeated the import successfully</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="resolution-section verification">
+
+                            <p class="detail-label">
+                                VERIFICATION
+                            </p>
+
+                            <p>
+                                The corrected file passed validation and
+                                product records were imported successfully.
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="flip-button secondary-button"
+                            data-action="flip"
+                            type="button"
+                            aria-pressed="true"
+                        >
+                            ← Back to incident
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- INC-003 -->
+            <article
+                class="incident-card"
+                data-incident="INC-003"
+                data-priority="high"
+                data-status="resolved"
+                data-category="network"
+            >
+
+                <div class="card-inner">
+
+                    <!-- FRONT -->
+                    <div class="card-face card-front">
+
+                        <div class="card-top">
+                            <span class="incident-id">INC-003</span>
+
+                            <span class="priority-badge priority-high">
+                                High Priority
+                            </span>
+                        </div>
+
+                        <div>
+                            <p class="category">NETWORK / ACCESS</p>
+
+                            <h3>VPN connection fails after password change</h3>
+
+                            <p class="incident-description">
+                                A remote user cannot establish a company VPN
+                                connection after changing their account
+                                password.
+                            </p>
+                        </div>
+
+                        <div class="incident-info">
+
+                            <div>
+                                <span>Environment</span>
+                                <strong>Windows 11 / VPN</strong>
+                            </div>
+
+                            <div>
+                                <span>Impact</span>
+                                <strong>Remote access unavailable</strong>
+                            </div>
+
+                            <div>
+                                <span>Status</span>
+                                <strong class="resolved">Resolved</strong>
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="flip-button"
+                            data-action="flip"
+                            type="button"
+                            aria-pressed="false"
+                        >
+                            View resolution →
+                        </button>
+
+                    </div>
+
+
+                    <!-- BACK -->
+                    <div class="card-face card-back">
+
+                        <div class="card-top">
+                            <span class="incident-id">INC-003</span>
+
+                            <span class="resolved-badge">
+                                Resolved
+                            </span>
+                        </div>
+
+                        <div class="resolution-section">
+
+                            <p class="detail-label">
+                                ROOT CAUSE
+                            </p>
+
+                            <h3>Cached VPN credentials</h3>
+
+                            <p>
+                                The VPN client continued attempting
+                                authentication with previously stored
+                                credentials after the user's password
+                                was changed.
+                            </p>
+
+                        </div>
+
+                        <div class="resolution-section">
+
+                            <p class="detail-label">
+                                RESOLUTION
+                            </p>
+
+                            <ul>
+                                <li>Confirmed general internet connectivity</li>
+                                <li>Verified the new account password</li>
+                                <li>Cleared stored VPN credentials</li>
+                                <li>Re-entered current credentials</li>
+                                <li>Completed authentication successfully</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="resolution-section verification">
+
+                            <p class="detail-label">
+                                VERIFICATION
+                            </p>
+
+                            <p>
+                                VPN connection was established successfully
+                                and access to the simulated internal
+                                environment was confirmed.
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="flip-button secondary-button"
+                            data-action="flip"
+                            type="button"
+                            aria-pressed="true"
+                        >
+                            ← Back to incident
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
         </section>
 
 
