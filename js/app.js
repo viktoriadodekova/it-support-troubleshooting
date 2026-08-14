@@ -409,3 +409,68 @@ function updateDashboardStats() {
 
 
 updateDashboardStats();
+
+
+// =================================
+// FILTER RESULT FEEDBACK
+// =================================
+
+const resultsCount =
+    document.getElementById("results-count");
+
+const noResultsMessage =
+    document.getElementById("no-results");
+
+
+function updateResultsFeedback() {
+
+    const cards =
+        Array.from(
+            document.querySelectorAll(".incident-card")
+        );
+
+    const visibleCards =
+        cards.filter(
+            (card) => card.style.display !== "none"
+        );
+
+
+    resultsCount.textContent =
+        `Showing ${visibleCards.length} of ${cards.length} incidents`;
+
+
+    if (visibleCards.length === 0) {
+
+        noResultsMessage.classList.add(
+            "is-visible"
+        );
+
+    } else {
+
+        noResultsMessage.classList.remove(
+            "is-visible"
+        );
+
+    }
+
+}
+
+
+incidentSearch.addEventListener(
+    "input",
+    updateResultsFeedback
+);
+
+
+filterButtons.forEach((button) => {
+
+    button.addEventListener(
+        "click",
+        updateResultsFeedback
+    );
+
+});
+
+
+updateResultsFeedback();
+
