@@ -1,0 +1,5 @@
+ProductCode,ProductName,Category,Price,Active
+P1001,Office Chair,Furniture,189.90,Yes
+P1002,Wireless Mouse,Electronics,29.90,Yes
+P1003,USB-C Dock,Electronics,89.90,Yes
+P1004,Standing Desk,Furniture,399.00,Yes
